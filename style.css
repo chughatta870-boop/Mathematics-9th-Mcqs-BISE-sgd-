@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Nastaliq Urdu', sans-serif;
+  background: #f0fdf4; /* Math کے لیے ہلکا سبز */
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  padding: 25px 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+h1 { 
+  color: #15803d; 
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+p {
+  color: #4b5563;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+#question {
+  font-size: 20px;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.option-btn {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 14px;
+  font-size: 18px;
+  font-family: 'Noto Nastaliq Urdu', sans-serif;
+  border: 2px solid #15803d;
+  background: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: right;
+}
+.option-btn:hover { 
+  background: #15803d; 
+  color: white; 
+  transform: scale(1.02);
+}
+.option-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.9;
+}
+
+#nextBtn {
+  padding: 12px 40px;
+  background: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Noto Nastaliq Urdu', sans-serif;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#nextBtn:hover {
+  background: #15803d;
+  transform: scale(1.05);
+}
+
+#result {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 15px;
+  min-height: 25px;
+}
+
+#score {
+  font-size: 18px;
+  font-weight: bold;
+  color: #15803d;
+  margin-top: 20px;
+  padding: 10px;
+  background: #dcfce7;
+  border-radius: 8px;
+}
+
+/* Watermark Footer */
+.watermark {
+  margin-top: 30px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #15803d;
+  opacity: 0.9;
+  border-top: 2px dashed #15803d;
+  letter-spacing: 1px;
+}
+
+/* Background Watermark */
+body::before {
+  content: "M Ijaz GHS 124NB";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  font-size: 50px;
+  color: rgba(21, 128, 61, 0.06); /* ہلکا سبز */
+  z-index: -1;
+  font-weight: bold;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .container { padding: 20px 15px; }
+  h1 { font-size: 24px; }
+  #question { font-size: 18px; }
+  .option-btn { font-size: 16px; padding: 12px; }
+  body::before { font-size: 35px; }
+}
